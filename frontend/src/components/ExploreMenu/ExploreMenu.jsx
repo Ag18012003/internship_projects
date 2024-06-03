@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ExploreMenu.css';
 import { menu_list } from '../../assets/assets';
 
 const ExploreMenu = ({ category, setCategory }) => {
+  const handleSetCategory = (item) => {
+    setCategory(prev => {
+      const newCategory = prev === item.menu_name ? 'All' : item.menu_name;
+      console.log('Category changed to:', newCategory);
+      return newCategory;
+    });
+  };
+
+  useEffect(() => {
+    console.log('Current category:', category);
+    console.log('Menu list:', menu_list);
+  }, [category]);
+
   return (
     <div className='explore-menu' id='explore-menu'>
       <h1>Explore Our Menu</h1>
@@ -11,7 +24,7 @@ const ExploreMenu = ({ category, setCategory }) => {
         {menu_list.map((item, index) => {
           return (
             <div
-              onClick={() => setCategory(prev => (prev === item.menu_name ? 'All' : item.menu_name))}
+              onClick={() => handleSetCategory(item)}
               key={index}
               className='explore-menu-list-item'
             >
