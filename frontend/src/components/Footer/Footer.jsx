@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { assets } from "../../assets/assets";
+
 const Footer = () => {
   return (
     <div className="footer" id="footer">
@@ -8,8 +9,12 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <div className="footer-social-icons">
-            <img src={assets.facebook_icon} alt="" />
-            <img src={assets.linkedin_icon} alt="" />
+            <a href="https://www.facebook.com/profile.php?id=100083690378533" target="_blank" rel="noopener noreferrer">
+              <img src={assets.facebook_icon} alt="Facebook" />
+            </a>
+            <a href="https://www.linkedin.com/in/aman-gupta-198753249/" target="_blank" rel="noopener noreferrer">
+              <img src={assets.linkedin_icon} alt="LinkedIn" />
+            </a>
           </div>
         </div>
         <div className="footer-content-center">
