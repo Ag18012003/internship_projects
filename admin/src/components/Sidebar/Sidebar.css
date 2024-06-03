@@ -1,0 +1,71 @@
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    font-size: max(1vw, 10px);
+    background-color: #f4f4f4; /* Light background color for better contrast */
+}
+
+.sidebar-options {
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 10px 15px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.sidebar-option:hover {
+    background-color: #e0e0e0; /* Hover background color */
+    border-color: #808080; /* Darker border on hover */
+}
+
+.sidebar-option img {
+    width: 20px; /* Fixed icon size for uniformity */
+    height: 20px;
+}
+
+.sidebar-option p {
+    margin: 0;
+    font-size: 1em; /* Relative font size */
+}
+
+/* Sidebar Responsive Adjustments */
+@media(max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        min-height: 100%;
+        border-right: 0;
+        border-bottom: 1.5px solid #a9a9a9;
+        width: fit-content;
+    }
+
+    .sidebar-options {
+        padding-top: 10px;
+        padding-left: 0px;
+        flex-direction: column;
+    }
+
+    .sidebar-option {
+        flex-direction: row;
+        gap: 5px;
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+    .sidebar-option p {
+        display: none;
+    }
+}
