@@ -69,17 +69,15 @@ const verifyOrder=async (req,res)=>{
 }
 
 //user orders for frontend
-const userOrders = async (req, res) => {
-    try {
-      console.log("Fetching orders for user:", req.body.userId);
-      const orders = await orderModel.find({ userId: req.body.userId });
-      res.json({ success: true, data: orders });
-    } catch (error) {
-      console.error('Error fetching orders:', error);
-      res.json({ success: false, message: "Error" });
-    }
-  };
-  
+const userOrders=async(req,res)=>{
+  try {
+    const orders=await orderModel.find({userId:req.body.userId})
+    res.json({success:true,data:orders})
+  } catch (error) {
+    console.log(Error);
+    res.json({success:false,message:"Error"})
+  }
+}
 
 
 //listing orders fro admin panel

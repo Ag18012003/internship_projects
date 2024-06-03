@@ -10,19 +10,21 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      console.log("Fetching orders...");
-      const response = await axios.post(url + '/api/order/userorders', {}, { headers: { token } });
-      console.log("Orders fetched:", response.data);
+      const response = await axios.post(
+        url + '/api/order/userorders',
+        {},
+        { headers: { token } }
+      );
       setData(response.data.data);
     } catch (error) {
       console.error('Error fetching orders:', error);
     }
   };
-  
+
   useEffect(() => {
     fetchOrders();
-  }, []);
-  
+  }, []); // Empty dependency array to run only once on mount
+
   return (
     <div className='my-orders'>
       <h2>My Orders</h2>
