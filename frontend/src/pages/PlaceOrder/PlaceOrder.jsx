@@ -45,7 +45,7 @@ const PlaceOrder = () => {
         const { session_url } = response.data;
         window.location.replace(session_url);
       } else {
-        alert("Error: " + response.data.message); // Provide more informative error messages
+        alert("Error"); 
       }
     } catch (error) {
       console.error("Error placing order:", error);
