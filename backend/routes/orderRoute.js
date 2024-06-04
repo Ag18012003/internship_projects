@@ -5,7 +5,7 @@ import { placeOrder, verifyOrder,userOrders, listOrders, updateOrderStatus } fro
 const orderRouter=express.Router();
 
 orderRouter.post("/place",authMiddleware,placeOrder);
-orderRouter.post("/verify",verifyOrder)
+orderRouter.post("/verify",verifyOrder);
 orderRouter.post("/userorders",authMiddleware,userOrders)
 orderRouter.get("/list",listOrders)
 orderRouter.post("/staus",updateOrderStatus)
