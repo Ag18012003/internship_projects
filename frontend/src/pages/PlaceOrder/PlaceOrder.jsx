@@ -3,7 +3,7 @@ import "./PlaceOrder.css";
 import axios from 'axios';
 import { StoreContext } from "../../Context/StoreContext";
 import { useNavigate } from "react-router-dom";
-import verify from "../Verify/Verify";
+
 
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, food_list, cartItems, url } = useContext(StoreContext);
