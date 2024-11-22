@@ -31,7 +31,7 @@ Vercel: For hosting both the Food-Del and Food-Del Admin applications.
 
 Setup Instructions
 1) Clone the Repository
-   git clone https://github.com/your-repo/food-del.git
+   git clone https://github.com/Ag18012003/internship_projects.git
    cd food-del
 2) Install Dependencies
    npm install
